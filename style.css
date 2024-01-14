@@ -64,13 +64,23 @@ box:nth-child(2):hover{
     margin-right: 10px;
     transition: all 0.6s ease;
 }
-.instagram{
-    background-color: var(--golden);
-}
+
 .box:hover .icon{
     background: var(--white);
     color: var(--golden);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 26);
+    box-shadow: 0 0 19px rgba(0, 0, 0, 26);
+}
+.box .icon2{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.6s ease;
 }
 .navigation{
     display: flex;
