@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --blue:#0000FF;
+    --white:#fff;
+    --dark:#1e2c2a;
+    --darkblue:#00008B;
+    --grey: #363636;
+    --golden: #daa520;
+    --darkgolden: #B8860b;
+    --darkkhaki: #BDB76b;
+    --truedark: #000000;
+}
+body{
+    align-items: flex-end;
+    height: 100vh;
+    font-size: 22px;
+    color:var(--white);
+    background: var(--truedark);
+}
+.box{
+    width: 65px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 0.6rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+.box:hover{
+    width: 200px;
+    background: var(--darkgolden);
+    border-radius: 35px;
+    color: var(--darkkhaki);
+    box-shadow: 0 0 50px var(--golden);
+}
+box:nth-child(2):hover{
+    background: var(--darkkhaki);
+    box-shadow: 0 0 50px var(--golden);
+}
+.navbar p{
+    transform: translate(60px);
+}
+.box .icon{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.6s ease;
+}
+.instagram{
+    background-color: var(--golden);
+}
+.box:hover .icon{
+    background: var(--white);
+    color: var(--golden);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 26);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.1rem var(--white);
+    width: 100%;
+    background: var(--truedark);
+    transition: all 0.5s;
+    position: fixed;
+}
+.navigation .logo{
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.logo span{
+    color: var(--white)
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--golden);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color:var(--white)
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--golden);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--golden);
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+.home-text{
+    max-width: 50rem;
+}
+.home-text .text-h4{
+    font-size: 1.5rem;
+    color: var(--golden);
+    margin-bottom: 1rem;
+}
+.home-text .text-h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+.home-text p{
+    margin-bottom: 3rem;
+    color: var(--golden);
+}
+.home-button{
+    padding: 15px 45px;
+    background: var(--golden);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+.home-button:hover{
+    background: var(--darkkhaki);
+}
+
+.home-img img{
+    width: 70%;
+}
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--dark);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 100%;
+    }
+}
+
